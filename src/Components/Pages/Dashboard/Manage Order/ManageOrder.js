@@ -1,10 +1,13 @@
 import React from 'react';
 
-const ManageOrder = () => {
+const ManageOrder = ({ order, index }) => {
   return (
-    <div>
-      <h1>Manage order</h1>
-    </div>
+    <tr>
+      <th>{index}</th>
+      <td>Cy Ganderton</td>
+      <td>Quality Control Specialist</td>
+      <td>Blue</td>
+    </tr>
   );
 };
 
