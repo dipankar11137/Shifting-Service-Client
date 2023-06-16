@@ -15,15 +15,15 @@ const ApplianceRepair = ({ appliance }) => {
             className="w-full pic-style"
             src={appliance?.img}
             alt=""
-            style={{ height: "300px" }}
+            style={{ height: '300px' }}
           />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{appliance?.name}</h2>
           <p>{appliance?.location}</p>
           <h2 className="mt-2">
-            Salary : <span className="font-bold">${appliance?.price}</span> /
-            Per Day
+            Salary : <span className="font-bold">{appliance?.price}</span> / Per
+            Day
           </h2>
         </div>
 

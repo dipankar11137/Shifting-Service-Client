@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import ManageOrder from './ManageOrder';
 
 const ManageOrders = () => {
@@ -8,6 +9,22 @@ const ManageOrders = () => {
       .then(res => res.json())
       .then(data => setOrders(data));
   }, [orders]);
+
+  const handleDelete = id => {
+    const proceed = window.confirm('Are You Sure ?');
+    if (proceed) {
+      const url = `http://localhost:5000/bookAppliances/${id}`;
+      fetch(url, {
+        method: 'DELETE',
+      })
+        .then(res => res.json())
+        .then(data => {
+          const remaining = orders.filter(product => product._id !== id);
+          setOrders(remaining);
+          toast.success('Successfully Remove');
+        });
+    }
+  };
   return (
     <div>
       <div className="overflow-x-auto ml-28">
@@ -33,6 +50,7 @@ const ManageOrders = () => {
                 key={order?._id}
                 order={order}
                 index={index + 1}
+                handleDelete={handleDelete}
               ></ManageOrder>
             ))}
           </tbody>

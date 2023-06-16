@@ -14,14 +14,14 @@ const Shifting = ({ shifting }) => {
             className="w-full pic-style"
             src={shifting?.img}
             alt=""
-            style={{ height: "300px" }}
+            style={{ height: '300px' }}
           />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{shifting?.name}</h2>
           <p>{shifting?.location}</p>
           <h2 className="mt-2">
-            Salary : <span className="font-bold">${shifting?.price}</span> / Per
+            Salary : <span className="font-bold">{shifting?.price}</span> / Per
             Day
           </h2>
           <p>{shifting?.description}</p>

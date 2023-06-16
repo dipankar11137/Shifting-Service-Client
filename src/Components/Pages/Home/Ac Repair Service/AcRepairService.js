@@ -14,14 +14,14 @@ const AcRepairService = ({ acRepair }) => {
             className="w-full pic-style"
             src={acRepair?.img}
             alt=""
-            style={{ height: "300px" }}
+            style={{ height: '300px' }}
           />
         </figure>
         <div className="card-body">
           <h2 className="card-title font-bold text-2xl">{acRepair?.name}</h2>
           <p>{acRepair?.location}</p>
           <h2 className="mt-2">
-            Salary : <span className="font-bold">${acRepair?.price}</span> / Per
+            Salary : <span className="font-bold">{acRepair?.price}</span> / Per
             Day
           </h2>
           <p>{acRepair?.description}</p>

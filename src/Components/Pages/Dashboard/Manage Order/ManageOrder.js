@@ -1,7 +1,6 @@
 import React from 'react';
 
-const ManageOrder = ({ order, index }) => {
-  console.log(order);
+const ManageOrder = ({ order, index, handleDelete, handleAccept }) => {
   return (
     <tr>
       <th>{index}</th>
@@ -15,10 +14,17 @@ const ManageOrder = ({ order, index }) => {
       <td>{order?.date}</td>
       <td>{order?.price}</td>
       <td>
-        <button className="btn btn-accent btn-xs">Accept</button>
+        <button
+          onClick={() => handleAccept(order?._id)}
+          className="btn btn-secondary btn-xs text-white font-semibold"
+        >
+          Accept
+        </button>
       </td>
       <td>
-        <button className="btn btn-xs">Remove</button>
+        <button onClick={() => handleDelete(order?._id)} className="btn btn-xs">
+          Remove
+        </button>
       </td>
     </tr>
   );
