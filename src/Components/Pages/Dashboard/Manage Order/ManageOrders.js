@@ -10,14 +10,21 @@ const ManageOrders = () => {
   }, [orders]);
   return (
     <div>
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto ml-28">
         <table className="table">
           <thead>
             <tr>
-              <th></th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
+              <th className="text-xl"></th>
+              <th className="text-xl">Name</th>
+              <th className="text-xl">Service</th>
+              <th className="text-xl">Problem</th>
+              <th className="text-xl">Customer Name</th>
+              <th className="text-xl">Phone</th>
+              <th className="text-xl">Address</th>
+              <th className="text-xl">Date</th>
+              <th className="text-xl">Price</th>
+              <th className="text-xl">Accept</th>
+              <th className="text-xl">Remove</th>
             </tr>
           </thead>
           <tbody>
