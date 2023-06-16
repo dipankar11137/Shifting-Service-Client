@@ -26,9 +26,22 @@ const ManageOrder = ({ order, index, handleDelete, handleAccept }) => {
         )}
       </td>
       <td>
-        <button onClick={() => handleDelete(order?._id)} className="btn btn-xs">
-          Remove
-        </button>
+        {order?.accept ? (
+          <button
+            disabled
+            onClick={() => handleDelete(order?._id)}
+            className="btn btn-xs"
+          >
+            Remove
+          </button>
+        ) : (
+          <button
+            onClick={() => handleDelete(order?._id)}
+            className="btn btn-xs"
+          >
+            Remove
+          </button>
+        )}
       </td>
     </tr>
   );

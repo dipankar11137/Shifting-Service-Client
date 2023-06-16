@@ -89,61 +89,60 @@ const MonthlyReports = () => {
       .then(data => setBeauties1(data));
   }, [reports1]);
   return (
-    <div className="flex justify-center mt-6">
-      <div className="w-8/12  bg-white">
-        <div className="p-5 ml-40">
-          <h1 className="text-3xl font-bold mb-10 underline uppercase text-orange-900">
-            Monthly Report
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-bold">
-            Total Services : {reports.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Ac Repair Services : {acs.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Appliance Repair Services : {appliances.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Trips And Travel : {trips.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Shifting Services : {shiftings.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Car Cars : {car.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Beauty & Salon : {beauties.length}
-          </h1>
+    <div>
+      <h1 className="text-3xl font-bold mb-10 underline uppercase text-orange-900 text-center mt-10 mr-20">
+        Monthly Report
+      </h1>
+      <div className="flex justify-center mt-6 bg-white mx-20 p-10 rounded-xl">
+        <div className="w-8/12  ">
+          <div className="p-5 ml-10 ">
+            <h1 className="p-1 text-xl text-blue-900 font-bold">
+              Total Booking Services : {reports.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Ac Repair Services : {acs.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Appliance Repair Services : {appliances.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Trips And Travel : {trips.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Shifting Services : {shiftings.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Car Cars : {car.length}
+            </h1>
+            <h1 className="p-1 text-xl text-blue-900 font-semibold">
+              Beauty & Salon : {beauties.length}
+            </h1>
+          </div>
         </div>
-      </div>
-      <div className="w-8/12  bg-white">
-        <div className="p-5">
-          <h1 className="text-3xl font-bold mb-10 underline uppercase text-orange-900">
-            Monthly Report
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-bold">
-            Total Services : {reports1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Ac Repair Services : {acs1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Appliance Repair Services : {appliances1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Trips And Travel : {trips1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Shifting Services : {shiftings1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Car Cars : {car1.length}
-          </h1>
-          <h1 className="p-1 text-xl text-blue-900 font-semibold">
-            Beauty & Salon : {beauties1.length}
-          </h1>
+        <div className="w-8/12  bg-white">
+          <div className="p-5">
+            <h1 className="p-1 text-xl text-lime-900 font-bold">
+              Total Done Services : {reports1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Ac Repair Services : {acs1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Appliance Repair Services : {appliances1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Trips And Travel : {trips1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Shifting Services : {shiftings1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Car Cars : {car1.length}
+            </h1>
+            <h1 className="p-1 text-xl text-lime-900 font-semibold">
+              Beauty & Salon : {beauties1.length}
+            </h1>
+          </div>
         </div>
       </div>
     </div>
