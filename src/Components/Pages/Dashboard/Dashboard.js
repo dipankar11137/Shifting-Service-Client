@@ -1,7 +1,5 @@
-import React from "react";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { Link, Outlet } from "react-router-dom";
-import auth from "../../../firebase.init";
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 const Dashboard = () => {
   // const [user] = useAuthState(auth);
@@ -39,10 +37,10 @@ const Dashboard = () => {
               </li>
               <li>
                 <Link
-                  to="/dashboard/reports"
+                  to="/dashboard/manageOrder"
                   className="font-bold hover:text-orange-600"
                 >
-                  Monthly Report
+                  Manage Order
                 </Link>
               </li>
               <li>
@@ -50,7 +48,7 @@ const Dashboard = () => {
                   to="/dashboard/reports"
                   className="font-bold hover:text-orange-600"
                 >
-                  Manage Order
+                  Monthly Report
                 </Link>
               </li>
             </ul>

@@ -1,35 +1,36 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Login from "./Components/Login/Login";
+import RequireAuth from './Components/Login/RequireAuth';
 import SignUp from "./Components/Login/SignUp";
 import About from "./Components/Pages/About/About";
 import Blogs from "./Components/Pages/Blogs/Blogs";
 import Contact from "./Components/Pages/Contact/Contact";
+import AddItem from './Components/Pages/Dashboard/AddItem';
+import Dashboard from './Components/Pages/Dashboard/Dashboard';
+import ManageItem from './Components/Pages/Dashboard/ManageItem';
+import AppleInventory from './Components/Pages/Home/AppleInventory';
 import Home from "./Components/Pages/Home/Home";
 import Navbar from "./Components/Pages/Share/Navbar";
-import NotFound from "./Components/Pages/Share/NotFound";
-import RequireAuth from "./Components/Login/RequireAuth";
-import AppleInventory from "./Components/Pages/Home/AppleInventory";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Dashboard from "./Components/Pages/Dashboard/Dashboard";
-import AddItem from "./Components/Pages/Dashboard/AddItem";
-import ManageItem from "./Components/Pages/Dashboard/ManageItem";
+import NotFound from './Components/Pages/Share/NotFound';
 // animation
 import "animate.css/animate.min.css";
 import Aos from "aos";
+import BookServices from './Components/Pages/BookServices/BookServices';
+import ManageOrders from './Components/Pages/Dashboard/Manage Order/ManageOrders';
+import MonthlyReports from './Components/Pages/Dashboard/MonthlyReports';
+import AcRepairServices from './Components/Pages/Home/Ac Repair Service/AcRepairServices';
+import ApplianceRepairs from './Components/Pages/Home/Appliance Repair/ApplianceRepairs';
+import Beautys from './Components/Pages/Home/Beauty And Salon/Beautys';
+import CarCare from './Components/Pages/Home/Car Care/CarCare';
+import Shiftings from './Components/Pages/Home/Shifting/Shiftings';
+import TripsTravels from './Components/Pages/Home/Trips & Travel/TripsTravels';
 import MyItems from "./Components/Pages/MyItems/MyItems";
 import PayNow from "./Components/Pages/MyItems/PayNow";
-import AddReview from "./Components/Pages/Review/AddReview";
-import AcRepairServices from "./Components/Pages/Home/Ac Repair Service/AcRepairServices";
-import ApplianceRepairs from "./Components/Pages/Home/Appliance Repair/ApplianceRepairs";
-import BookServices from "./Components/Pages/BookServices/BookServices";
-import TripsTravels from "./Components/Pages/Home/Trips & Travel/TripsTravels";
-import Shiftings from "./Components/Pages/Home/Shifting/Shiftings";
-import CarCare from "./Components/Pages/Home/Car Care/CarCare";
-import Beautys from "./Components/Pages/Home/Beauty And Salon/Beautys";
-import MonthlyReports from "./Components/Pages/Dashboard/MonthlyReports";
+import AddReview from './Components/Pages/Review/AddReview';
 
 Aos.init();
 
@@ -105,6 +106,7 @@ function App() {
           <Route index element={<AddItem />} />
           <Route path="manageItem" element={<ManageItem />} />
           <Route path="reports" element={<MonthlyReports />} />
+          <Route path="manageOrder" element={<ManageOrders />} />
         </Route>
         {/* Dashboard End */}
 
