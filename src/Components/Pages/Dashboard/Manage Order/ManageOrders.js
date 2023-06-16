@@ -4,12 +4,75 @@ import ManageOrder from './ManageOrder';
 
 const ManageOrders = () => {
   const [orders, setOrders] = useState([]);
+  const [booking, setBooking] = useState({});
+  const [iId, setIId] = useState('');
   useEffect(() => {
     fetch('http://localhost:5000/bookAppliances')
       .then(res => res.json())
       .then(data => setOrders(data));
   }, [orders]);
+  // useEffect(() => {
+  //   fetch(`http://localhost:5000/bookAppliancesId/${iId}`)
+  //     .then(res => res.json())
+  //     .then(data => setBooking(data));
+  // }, [iId]);
 
+  // const updateAcceptProduct = (id) => {
+
+  //   const updateBooking = {
+  //     ...booking,
+  //   };
+  //   console.log(updateBooking);
+  //   const url = `http://localhost:5000/bookServiceDone`;
+  //   fetch(url, {
+  //     method: 'POST',
+  //     headers: {
+  //       'content-type': 'application/json',
+  //     },
+  //     body: JSON.stringify(updateBooking),
+  //   })
+  //     .then(res => res.json())
+  //     .then(result => {
+  //       toast.success('Done');
+  //     });
+  // };
+  const updateAcceptProduct = id => {
+    fetch(`http://localhost:5000/bookAppliancesId/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        const updateBooking = {
+          ...data,
+        };
+        console.log(updateBooking);
+        const url = `http://localhost:5000/bookServiceDone`;
+        fetch(url, {
+          method: 'POST',
+          headers: {
+            'content-type': 'application/json',
+          },
+          body: JSON.stringify(updateBooking),
+        })
+          .then(res => res.json())
+          .then(result => {
+            toast.success('Done');
+          });
+      });
+  };
+  const handleAccept = id => {
+    setIId(id);
+    const updateAccept = { accept: true };
+    fetch(`http://localhost:5000/bookAppliancesService/${id}`, {
+      method: 'PUT',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify(updateAccept),
+    })
+      .then(res => res.json())
+      .then(data => {
+        updateAcceptProduct(id);
+      });
+  };
   const handleDelete = id => {
     const proceed = window.confirm('Are You Sure ?');
     if (proceed) {
@@ -50,6 +113,7 @@ const ManageOrders = () => {
                 key={order?._id}
                 order={order}
                 index={index + 1}
+                handleAccept={handleAccept}
                 handleDelete={handleDelete}
               ></ManageOrder>
             ))}

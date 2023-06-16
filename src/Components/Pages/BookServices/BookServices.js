@@ -19,9 +19,9 @@ const BookServices = () => {
 
   useEffect(() => {
     fetch(`http://localhost:5000/allServicesId/${id}`)
-      .then((res) => res.json())
-      .then((data) => setBookServices(data));
-  }, []);
+      .then(res => res.json())
+      .then(data => setBookServices(data));
+  }, [id]);
 
   // console.log(bookServices);
 

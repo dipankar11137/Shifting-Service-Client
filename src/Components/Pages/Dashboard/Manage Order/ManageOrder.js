@@ -14,12 +14,16 @@ const ManageOrder = ({ order, index, handleDelete, handleAccept }) => {
       <td>{order?.date}</td>
       <td>{order?.price}</td>
       <td>
-        <button
-          onClick={() => handleAccept(order?._id)}
-          className="btn btn-secondary btn-xs text-white font-semibold"
-        >
-          Accept
-        </button>
+        {order?.accept ? (
+          <h1 className="text-blue-700 text-xl font-extrabold">Done</h1>
+        ) : (
+          <button
+            onClick={() => handleAccept(order?._id)}
+            className="btn btn-secondary btn-xs text-white font-semibold"
+          >
+            Accept
+          </button>
+        )}
       </td>
       <td>
         <button onClick={() => handleDelete(order?._id)} className="btn btn-xs">
