@@ -51,6 +51,11 @@ const Dashboard = () => {
                   Monthly Report
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className="font-bold hover:text-orange-600">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
